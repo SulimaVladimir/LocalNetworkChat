@@ -2,16 +2,17 @@ package ru.chat.client;
 
 import ru.network.TCPConnection;
 import ru.network.TCPConnectionListener;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 public class ClientWindow extends JFrame implements ActionListener, TCPConnectionListener {
 
-    private static final String ipAddress = "192.168.1.1";
+    private static String ipAddress;
     private static final int port = 8000;
     private static final int widthWindow = 640;
     private static final int heightWindow = 480;
@@ -32,6 +33,17 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     private TCPConnection connection;
 
     private ClientWindow(){
+
+        InetAddress ip;
+        try {
+            ip = InetAddress.getLocalHost();
+            ipAddress = ip.getHostName();
+
+        } catch (UnknownHostException e) {
+
+            e.printStackTrace();
+        }
+
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(widthWindow, heightWindow);
         setLocationRelativeTo(null);
