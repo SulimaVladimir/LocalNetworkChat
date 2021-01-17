@@ -2,7 +2,6 @@ package ru.chat.server;
 
 import ru.network.TCPConnection;
 import ru.network.TCPConnectionListener;
-
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class ChatServer implements TCPConnectionListener {
 
     private ChatServer(){
         System.out.println("Server running...");
-        try(ServerSocket serverSocket = new ServerSocket(8189)){
+        try(ServerSocket serverSocket = new ServerSocket(8000)){
             while (true){
                 try{
                     new TCPConnection(this, serverSocket.accept());
