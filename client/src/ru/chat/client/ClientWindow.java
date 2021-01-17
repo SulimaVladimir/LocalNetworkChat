@@ -1,6 +1,5 @@
 package ru.chat.client;
 
-import javafx.scene.layout.BorderWidths;
 import ru.network.TCPConnection;
 import ru.network.TCPConnectionListener;
 
