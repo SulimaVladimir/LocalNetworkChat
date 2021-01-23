@@ -104,7 +104,6 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
                 log.setCaretPosition(log.getDocument().getLength());
             }
         });
-        
     }
 
 }
