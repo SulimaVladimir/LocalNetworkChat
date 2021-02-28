@@ -1,6 +1,5 @@
 package ru.network;
 
-
 import org.omg.IOP.IOR;
 
 import java.io.*;
