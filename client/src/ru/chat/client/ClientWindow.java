@@ -107,5 +107,3 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     }
 
 }
-
-
