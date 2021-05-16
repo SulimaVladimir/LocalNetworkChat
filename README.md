@@ -15,3 +15,4 @@ App can be used by Java client and PuTTY.
 
 Launch the server for chatting. Connect to the server using PuTTY, or run Java client named ClientWindow. Fill in the "Name" field. Enter your message in the text box below. 
 The message will be sent to all users who are online and are in the same Local Area Network.
+
